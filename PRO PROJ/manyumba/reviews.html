@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews - Vacant Homes</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Vacant Homes</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="hero">
+    <h1>Customer Reviews</h1>
+    <p class="tagline">See what our clients say about Vacant Homes.</p>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews-section">
+    <div class="review-card">
+      <h3>Jane Mwangi</h3>
+      <p class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </p>
+      <p>"I found my dream house in Nairobi through Vacant Homes. The process was smooth and professional!"</p>
+    </div>
+
+    <div class="review-card">
+      <h3>David Otieno</h3>
+      <p class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+      </p>
+      <p>"Great customer service and lots of options to choose from. Highly recommend!"</p>
+    </div>
+
+    <div class="review-card">
+      <h3>Mary Njeri</h3>
+      <p class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </p>
+      <p>"Affordable and reliable listings. I moved into my new home last month and I’m very happy."</p>
+    </div>
+  </section>
+
+  <!-- Add Review Form -->
+  <section class="add-review">
+    <h2>Leave a Review</h2>
+    <form id="reviewForm">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="rating">Rating</label>
+      <select id="rating" name="rating" required>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="1">⭐</option>
+      </select>
+
+      <label for="comment">Your Review</label>
+      <textarea id="comment" name="comment" rows="4" required></textarea>
+
+      <button type="submit">Submit Review</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

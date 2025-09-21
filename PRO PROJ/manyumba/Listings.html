@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listings - Vacant Homes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Vacant Homes</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html" class="active">Listings</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="hero">
+    <h1>Available Listings</h1>
+    <p class="tagline">Browse through all available houses for rent and sale across Kenya.</p>
+  </section>
+
+  <!-- Filter Section -->
+  <section class="filters">
+    <label for="locationFilter">Filter by Location:</label>
+    <select id="locationFilter">
+      <option value="all">All</option>
+      <option value="Nairobi">Nairobi</option>
+      <option value="Mombasa">Mombasa</option>
+      <option value="Kisumu">Kisumu</option>
+      <option value="Nakuru">Nakuru</option>
+      <option value="Eldoret">Eldoret</option>
+      <option value="Thika">Thika</option>
+    </select>
+
+    <label for="priceFilter">Filter by Price:</label>
+    <select id="priceFilter">
+      <option value="all">All</option>
+      <option value="low">Below $1500</option>
+      <option value="mid">$1500 - $1800</option>
+      <option value="high">Above $1800</option>
+    </select>
+  </section>
+
+  <!-- Listings Section -->
+  <section class="listings" id="listingContainer">
+    <!-- Example Listing Cards (can copy from homepage or load dynamically later) -->
+    <div class="card" data-location="Nairobi" data-price="1600">
+      <img src="IMAGES/pexels-photo-106399.jpeg" alt="House 1">
+      <h3>House in Nairobi</h3>
+      <p>Price: $1600</p>
+      <a href="house1.html" class="details-link">View Details</a>
+    </div>
+
+    <div class="card" data-location="Mombasa" data-price="1400">
+      <img src="IMAGES/pexels-pixabay-280222.jpg" alt="House 2">
+      <h3>House in Mombasa</h3>
+      <p>Price: $1400</p>
+      <a href="house2.html" class="details-link">View Details</a>
+    </div>
+
+    <div class="card" data-location="Kisumu" data-price="1800">
+      <img src="IMAGES/pexels-pixabay-221540.jpg" alt="House 3">
+      <h3>House in Kisumu</h3>
+      <p>Price: $1800</p>
+      <a href="house3.html" class="details-link">View Details</a>
+    </div>
+
+    <div class="card" data-location="Nakuru" data-price="1200">
+      <img src="IMAGES/pexels-frans-van-heerden-201846-1438832.jpg" alt="House 4">
+      <h3>House in Nakuru</h3>
+      <p>Price: $1200</p>
+      <a href="house4.html" class="details-link">View Details</a>
+    </div>
+
+    <div class="card" data-location="Eldoret" data-price="2000">
+      <img src="IMAGES/pexels-photo-106399.jpeg" alt="House 5">
+      <h3>House in Eldoret</h3>
+      <p>Price: $2000</p>
+      <a href="house5.html" class="details-link">View Details</a>
+    </div>
+
+    <div class="card" data-location="Thika" data-price="1500">
+      <img src="IMAGES/pexels-sebastians-731082.jpg" alt="House 6">
+      <h3>House in Thika</h3>
+      <p>Price: $1500</p>
+      <a href="house6.html" class="details-link">View Details</a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

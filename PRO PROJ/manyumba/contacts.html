@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Vacant Homes</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Vacant Homes</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li><a href="contacts.html" class="active">Contact</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p class="tagline">We’d love to hear from you. Get in touch today!</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-form">
+      <h2>Send us a message</h2>
+       
+      <form id="contactForm" action="#" method="POST">
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h2>Our Office</h2>
+      <p><strong>Address:</strong> Nairobi, Kenya</p>
+      <p><strong>Email:</strong> info@vacanthomes.com</p>
+      <p><strong>Phone:</strong> +254 700 123 456</p>
+
+      <!-- Map Embed -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.083259948!2d36.8219469!3d-1.2920659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10dfb44d4e71%3A0x96b69e5258fa4aaf!2sNairobi!5e0!3m2!1sen!2ske!4v1691766299883!5m2!1sen!2ske" 
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+    <div id="successPopup" class="popup-message">
+  ✅ Message sent successfully! (Demo only — nikitengeneza back end ndio ntalink na ma email)
+</div>
+
+  </section>
+ <!-- Social Media Section -->
+<section class="social-media">
+  <h3>Connect With Us</h3>
+  <div class="social-icons">
+    <a href="#" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</section>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

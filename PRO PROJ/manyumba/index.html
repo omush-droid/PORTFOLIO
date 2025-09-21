@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacant Homes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Vacant Homes</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Listings.html">Listings</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger">
+        ☰
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero/Search Section -->
+  <section class="hero">
+    <h1>Find Your Perfect Home</h1>
+     <p class="tagline">
+  Discover your dream home with Vacant Homes — where comfort meets affordability. 
+  Browse a wide range of houses across Kenya, from luxurious villas to cozy apartments. 
+  Start your journey today and find the perfect place to call home.
+</p>
+    <input type="text" id="searchBar" placeholder="Search by location or price...">
+  </section>
+ 
+
+<!-- Filters -->
+<section class="filters">
+  <label for="locationFilter">Filter by Location:</label>
+  <select id="locationFilter">
+    <option value="all">All</option>
+    <option value="nairobi">Nairobi</option>
+    <option value="mombasa">Mombasa</option>
+    <option value="kisumu">Kisumu</option>
+    <option value="nakuru">Nakuru</option>
+    <option value="eldoret">Eldoret</option>
+    <option value="thika">Thika</option>
+  </select>
+
+  <label for="priceFilter">Filter by Price:</label>
+  <select id="priceFilter">
+    <option value="all">All</option>
+    <option value="low">Below $1500</option>
+    <option value="mid">$1500 - $1800</option>
+    <option value="high">Above $1800</option>
+  </select>
+</section>
+
+  
+  
+<!-- Listings -->
+<section class="listings" id="listingContainer">
+   <div class="card" 
+       
+       data-location="Nairobi"
+       data-price="1600"
+       data-images="https://via.placeholder.com/400x250?text=Nairobi+1,https://via.placeholder.com/400x250?text=Nairobi+2,https://via.placeholder.com/400x250?text=Nairobi+3">
+    <img src="IMAGES/pexels-photo-106399.jpeg" alt="MANSIONS">
+    <h3>House in Nairobi</h3>
+    <p>Price: $1600</p>
+    <a href="house1.html" class="details-link">View Details</a>
+
+  </div>
+
+  <div class="card" 
+       data-location="Mombasa" 
+       data-price="1400" 
+       data-desc="A beachside villa perfect for holidays."
+       data-images="https://via.placeholder.com/400x250?text=Mombasa+1,https://via.placeholder.com/400x250?text=Mombasa+2">
+    <img src="IMAGES/pexels-pixabay-280222.jpg" alt="House 2">
+    <h3>House in Mombasa</h3>
+    <p>Price: $1400</p>
+    <a href="house2.html" class="details-link">View Details</a>
+
+  </div>
+
+  <div class="card" data-location="Kisumu" 
+  data-price="1800" 
+  data-desc="Spacious family house near Lake Victoria.">
+  
+    <img src="IMAGES/pexels-pixabay-221540.jpg" alt="House 3">
+    <h3>House in Kisumu</h3>
+    <p>Price: $1800</p>
+   <a href="house3.html" class="details-link">View Details</a>
+
+  </div>
+
+  <div class="card" data-location="Nakuru" data-price="1200" data-desc="Affordable 2-bedroom apartment in town.">
+    
+    <img src="IMAGES/pexels-frans-van-heerden-201846-1438832.jpg" alt="House 4">
+    <h3>House in Nakuru</h3>
+    <p>Price: $1200</p>
+    <a href="house4.html" class="details-link">View Details</a>
+
+  </div>
+
+  <div class="card" data-location="Eldoret" data-price="2000" data-desc="Luxury villa with a private garden.">
+    <img src="IMAGES/pexels-photo-106399.jpeg" alt="House 5">
+    <h3>House in Eldoret</h3>
+    <p>Price: $2000</p>
+   <a href="house5.html" class="details-link">View Details</a>
+
+  </div>
+
+  <div class="card" data-location="Thika" data-price="1500" data-desc="Modern townhouse close to Nairobi.">
+    <img src="IMAGES/pexels-sebastians-731082.jpg" alt="House 6">
+    <h3>House in Thika</h3>
+    <p>Price: $1500</p>
+    <a href="house6.html" class="details-link">View Details</a>
+
+  </div>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>
