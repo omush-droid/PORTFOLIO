@@ -396,3 +396,13 @@ header {
 .cv-btn.request:hover {
   background: #d35400; /* Darker orange */
 }
+.celebrate {
+  text-align: center;
+  color: #0077b6;
+  font-size: 24px;
+  animation: fadeIn 2s ease-in-out infinite alternate;
+}
+@keyframes fadeIn {
+  from { opacity: 0.5; transform: scale(0.95); }
+  to   { opacity: 1;   transform: scale(1.05); }
+}
