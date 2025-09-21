@@ -1,0 +1,398 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  color: #fff;
+}
+
+/* ===== NAVBAR ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: green;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* ===== HERO SECTION ===== */
+.home {
+  height: 100vh;
+  background: url("images/businessman-hand-touch-with-code-html-and-programming-on-screen-laptop-programmer-development-computer-code-web-design-coding-technology-in-software-digital-software-technology-development-iot-photo.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.home .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.home .content {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.5s ease forwards;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 1.2s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.home h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.home h1 span {
+  color: #00bcd4;
+}
+
+.home p {
+  margin: 10px 0 20px;
+  font-size: 1.2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.9s;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00bcd4;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1.2s;
+}
+
+.btn:hover {
+  background: #0288a7;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* ===== ABOUT PAGE ===== */
+.about {
+  min-height: 100vh;
+  background: grey;
+  padding: 80px 20px;
+  color: green;
+  text-align: center;
+}
+
+.about .container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00bcd4;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.skills {
+  text-align: left;
+}
+
+.skills h3 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills ul li {
+  background: white;
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.skills ul li:hover {
+  transform: translateX(10px);
+  background: #00bcd4;
+  color: white;
+}
+/* ===== PROJECTS PAGE ===== */
+.projects {
+  min-height: 100vh;
+  background: url(images/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg);
+  padding: 80px 20px;
+  text-align: center;
+  color: #333;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00bcd4;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.project-card .buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.project-card .btn {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  background: #00bcd4;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.project-card .btn:hover {
+  background: #0288a7;
+}
+/* Contact Page */
+.contact {
+    background: url(images/businessman-hand-touch-with-code-html-and-programming-on-screen-laptop-programmer-development-computer-code-web-design-coding-technology-in-software-digital-software-technology-development-iot-photo.jpg);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.contact-form button {
+  background: blue;
+  color: yellow;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #555;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.social-links a {
+  font-size: 2rem;
+  margin: 0 10px;
+  color: #333;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #0077b5; /* LinkedIn blue as default hover */
+}
+/* Spinner inside button */
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 3px solid #fff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 8px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Disabled button style */
+.contact-form button:disabled {
+  background: #777;
+  cursor: not-allowed;
+}
+.cv-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cv-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #333;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.cv-btn:hover {
+  background: #0077b5;
+  transform: scale(1.05);
+}
+
+.cv-btn i {
+  margin-right: 8px;
+}
+.cv-btn.request {
+  background: #e67e22; /* Orange button */
+}
+
+.cv-btn.request:hover {
+  background: #d35400; /* Darker orange */
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">My Portfolio</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h1>Contact Me</h1>
+    <p>I'd love to hear from you! Fill out the form below or reach me on social media.</p>
+
+    <div class="contact-container">
+      <!-- Contact Form -->
+      <form action="https://formspree.io/f/xldwqlgv" method="POST" class="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+   <button type="submit" id="submit-btn">
+    <span id="btn-text">Send Message</span>
+    <span id="btn-spinner" class="spinner" style="display: none;"></span>
+  </button>
+  <p id="form-status"></p> <!-- Success/Error message -->
+</form>
+
+<!-- Script for handling messages -->
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+  const btn = document.getElementById("submit-btn"); // add id="submit-btn" to your button
+  const btnText = document.getElementById("btn-text"); // add <span id="btn-text">Send Message</span> inside button
+  const btnSpinner = document.getElementById("btn-spinner"); // add <span id="btn-spinner" class="spinner" style="display:none;"></span> inside button
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Show spinner & disable button
+    btn.disabled = true;
+    btnText.textContent = "Sending...";
+    btnSpinner.style.display = "inline-block";
+
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      status.innerHTML = "✅ Thanks! Your message has been sent.";
+      status.style.color = "green";
+      form.reset();
+    } else {
+      status.innerHTML = "❌ Oops! Something went wrong.";
+      status.style.color = "red";
+    }
+
+    // Reset button
+    btn.disabled = false;
+    btnText.textContent = "Send Message";
+    btnSpinner.style.display = "none";
+
+    // Auto-hide status after 5s
+    setTimeout(() => {
+      status.innerHTML = "";
+    }, 5000);
+  });
+</script>
+
+
+      <!-- Social Media Links -->
+      <div class="contact-info">
+        <h2>Connect with me</h2>
+        <div class="social-links">
+          <a href="https://github.com/omush-droid" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ephraim-omush-47020a292/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
